@@ -82,6 +82,11 @@ miw:
   enforceHttps: ${ENFORCE_HTTPS_IN_DID_RESOLUTION:true}
   contractTemplatesUrl: ${CONTRACT_TEMPLATES_URL:https://public.catena-x.org/contracts/}
   didDocumentContextUrls: ${DID_DOCUMENT_CONTEXT_URL:https://www.w3.org/ns/did/v1,https://w3c.github.io/vc-jws-2020/contexts/v1}
+  contextMappings:
+    '[https://catenax-ng.github.io/product-core-schemas/businessPartnerData.json]': ${VC_SCHEMA_BUSINESS_PARTNER_DATA:file://%PWD%/schemas/businessPartnerData.json}
+    '[https://catenax-ng.github.io/product-core-schemas/MembershipCredential.json]': ${VC_SCHEMA_MEMBERSHIP_CREDENTIAL:file://%PWD%/schemas/MembershipCredential.json}
+    '[https://catenax-ng.github.io/product-core-schemas/SummaryVC.json]': ${VC_SCHEMA_SUMMARY_VC:file://%PWD%/schemas/SummaryVC.json}
+    '[https://catenax-ng.github.io/product-core-schemas/UseCaseVC.json]': ${VC_SCHEMA_USE_CASE_VC:file://%PWD%/schemas/UseCaseVC.json}
   security:
     enabled: true
     realm: ${KEYCLOAK_REALM:miw_test}

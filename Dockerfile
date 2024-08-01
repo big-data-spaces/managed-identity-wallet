@@ -29,6 +29,8 @@ USER miw
 
 COPY LICENSE NOTICE.md DEPENDENCIES SECURITY.md /build/libs/miw-latest.jar /app/
 
+ADD schemas/ /app/schemas
+
 WORKDIR /app
 
 HEALTHCHECK --start-period=30s CMD curl --fail http://localhost:8090/actuator/health/liveness || exit 1
