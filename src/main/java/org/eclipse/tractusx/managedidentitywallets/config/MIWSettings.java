@@ -27,6 +27,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -39,5 +40,6 @@ public record MIWSettings(String host, String encryptionKey, String authorityWal
                           @DateTimeFormat(pattern = "dd-MM-yyyy") Date vcExpiryDate,
                           Set<String> supportedFrameworkVCTypes,
                           boolean enforceHttps, String contractTemplatesUrl,
-                          List<URI> didDocumentContextUrls) {
+                          List<URI> didDocumentContextUrls,
+                          Map<String,String> contextMappings) {
 }
